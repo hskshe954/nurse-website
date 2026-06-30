@@ -28,7 +28,7 @@ export default function FloatingContact() {
     {
       icon: <MapPin size={22} />,
       label: "Find Us",
-      href: "https://www.google.com/maps/place/Genesis+Maternity+Clinic+T.+Padilla/@10.3017702,123.9063521,19z/data=!4m15!1m8!3m7!1s0x33a999ca7a93efd5:0xfa431f165d4c7296!2sJerome's+gadgets+-+T.+Padilla!8m2!3d10.3018446!4d123.9064056!10e5!16s%2Fg%2F11rv09y2jw!3m5!1s0x33a9995dc8c0ff2f:0xf9d39ff10e034ec7!8m2!3d10.3019659!4d123.9060709!16s%2Fg%2F11bw77tgzy?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D",
+      href: "https://www.google.com/maps/place/8W24%2BPHJ,+34+Tiburcio+Padilla+St,+Cebu+City,+6000+Cebu/@10.301832,123.9057776,19z/data=!3m1!4b1!4m6!3m5!1s0x33a9995de37539fd:0xdd81e8de3a7880a!8m2!3d10.301832!4d123.9064213!16s%2Fg%2F11gjhj5gs6?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D",
       color: "bg-red-500",
     },
   ];
