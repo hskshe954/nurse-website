@@ -105,7 +105,7 @@ export default function Contact() {
               {
                 icon: Mail,
                 title: "Email",
-                text: "info@nursemitch.com",
+                text: "mitchampz095@gmail.com",
               },
               {
                 icon: MapPin,

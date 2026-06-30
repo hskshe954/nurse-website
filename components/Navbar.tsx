@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { HeartPulse, Menu, X } from "lucide-react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 const links = [
   { name: "Home", href: "#home" },
@@ -22,9 +23,16 @@ export default function Navbar() {
         {/* Logo */}
         <a
           href="#home"
-          className="flex items-center gap-2"
+          className="flex items-center gap-3"
         >
-          <HeartPulse className="h-7 w-7 text-cyan-400" />
+          <Image
+            src="/images/logo.png"
+            alt="Nurse Mitch Logo"
+            width={45}
+            height={45}
+            className="rounded-full"
+            priority
+          />
 
           <span className="text-xl font-bold tracking-wide text-white">
             Nurse Mitch
@@ -58,7 +66,7 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Button */}
+        {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="text-white md:hidden"
@@ -70,9 +78,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="border-t border-white/10 bg-slate-950/95 backdrop-blur-xl md:hidden">
-
           <div className="flex flex-col px-6 py-6">
-
             {links.map((link) => (
               <a
                 key={link.name}
@@ -91,9 +97,7 @@ export default function Navbar() {
             >
               Book Appointment
             </a>
-
           </div>
-
         </div>
       )}
     </nav>
