@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import FloatingContact from "@/components/FloatingContact";
+import Feedback from "@/components/Feedback";
 import About from "@/components/About";
 import BeforeAfter from "@/components/BeforeAfter";
 import Gallery from "@/components/Gallery";
@@ -16,6 +17,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <FloatingContact />
+      <Feedback />
       <About />
       <Gallery />
       <BeforeAfter />
