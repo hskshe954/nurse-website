@@ -250,6 +250,20 @@ export default function Contact() {
                 </div>
               )}
             </form>
+            {/* Facebook Button */}
+<div className="mt-8 text-center">
+  <p className="text-slate-300 mb-3">
+    Follow us on Facebook
+  </p>
+
+  <a
+    href="https://www.facebook.com/profile.php?id=100088070547410"
+    target="_blank"
+    className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-500 transition"
+  >
+    📘 Visit Facebook Page
+  </a>
+</div>
           </motion.div>
 
         </div>
