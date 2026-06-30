@@ -100,7 +100,7 @@ export default function Contact() {
               {
                 icon: Phone,
                 title: "Phone",
-                text: "+63 912 345 6789",
+                text: "+63 976 295 4314",
               },
               {
                 icon: Mail,
@@ -110,12 +110,12 @@ export default function Contact() {
               {
                 icon: MapPin,
                 title: "Location",
-                text: "Maragusan, Davao de Oro",
+                text: "34 T.Padilla street corner, M.j Cuenco, Cebu City.",
               },
               {
                 icon: Clock,
                 title: "Clinic Hours",
-                text: "Monday - Saturday\n9:00 AM - 6:00 PM",
+                text: "Monday - Sunday\n9:30 AM - 9:30 PM",
               },
             ].map((item, index) => {
               const Icon = item.icon;
