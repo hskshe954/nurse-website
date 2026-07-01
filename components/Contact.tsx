@@ -200,19 +200,29 @@ export default function Contact() {
               />
 
               <select
-                name="treatment"
-                required
-                className="w-full rounded-xl border border-pink-200 p-4 outline-none transition focus:border-pink-500"
-              >
-                <option value="">Select Treatment</option>
-                <option>Botox</option>
-                <option>Dermal Fillers</option>
-                <option>HydraFacial</option>
-                <option>Skin Rejuvenation</option>
-                <option>Chemical Peel</option>
-                <option>IV Therapy</option>
-                <option>PDO Thread Lift</option>
-              </select>
+  name="treatment"
+  required
+  className="w-full rounded-xl border border-pink-200 p-4 outline-none transition focus:border-pink-500"
+>
+  <option value="">Select Treatment</option>
+
+  <option>Botox / Dysport</option>
+  <option>Lip Fillers</option>
+  <option>Cheek & Midface Fillers</option>
+  <option>Under-Eye Fillers</option>
+  <option>Jawline & Chin Sculpting</option>
+  <option>Skin Brightening Program</option>
+  <option>Chemical Peels</option>
+  <option>HydraFacial</option>
+  <option>Skin Rejuvenation</option>
+  <option>Glutathione IV Drip</option>
+  <option>Vitamin C IV Therapy</option>
+  <option>PDO Thread Lift</option>
+  <option>Body Contouring & Slimming</option>
+  <option>Hiko Nose Lift</option>
+  <option>Waxing</option>
+  <option>Nail Services</option>
+</select>
 
               <input
                 name="appointment_date"
@@ -223,20 +233,48 @@ export default function Contact() {
               />
 
               <select
-                name="appointment_time"
-                required
-                className="w-full rounded-xl border border-pink-200 p-4 outline-none transition focus:border-pink-500"
-              >
-                <option value="">Preferred Time</option>
-                <option>9:00 AM</option>
-                <option>10:00 AM</option>
-                <option>11:00 AM</option>
-                <option>1:00 PM</option>
-                <option>2:00 PM</option>
-                <option>3:00 PM</option>
-                <option>4:00 PM</option>
-                <option>5:00 PM</option>
-              </select>
+  name="appointment_time"
+  required
+  className="w-full rounded-xl border border-pink-200 p-4 outline-none transition focus:border-pink-500"
+>
+  <option value="">Preferred Time</option>
+
+  <option>9:30 AM</option>
+  <option>10:00 AM</option>
+  <option>10:30 AM</option>
+  <option>11:00 AM</option>
+  <option>11:30 AM</option>
+
+  <option>12:00 PM</option>
+  <option>12:30 PM</option>
+
+  <option>1:00 PM</option>
+  <option>1:30 PM</option>
+
+  <option>2:00 PM</option>
+  <option>2:30 PM</option>
+
+  <option>3:00 PM</option>
+  <option>3:30 PM</option>
+
+  <option>4:00 PM</option>
+  <option>4:30 PM</option>
+
+  <option>5:00 PM</option>
+  <option>5:30 PM</option>
+
+  <option>6:00 PM</option>
+  <option>6:30 PM</option>
+
+  <option>7:00 PM</option>
+  <option>7:30 PM</option>
+
+  <option>8:00 PM</option>
+  <option>8:30 PM</option>
+
+  <option>9:00 PM</option>
+  <option>9:30 PM</option>
+</select>
             <textarea
                 name="message"
                 rows={5}
