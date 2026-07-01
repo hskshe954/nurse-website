@@ -70,23 +70,36 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Treatment Tags */}
-          <div className="mt-10 flex flex-wrap justify-center gap-2 md:justify-start">
+          {/* Featured Services */}
+<div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
 
-  {[
-    "💉 Botox",
-    "✨ Fillers",
-    "💧 IV Therapy",
-    "🌸 Skin Care",
-    "💅 Nails",
-  ].map((item) => (
-    <span
-      key={item}
-      className="rounded-full bg-pink-100 px-3 py-2 text-xs font-medium text-pink-600 md:px-4 md:text-sm"
-    >
-      {item}
-    </span>
-  ))}
+  <div className="rounded-2xl border border-pink-200 bg-white/80 p-4 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+    <div className="text-3xl">💉</div>
+    <p className="mt-2 text-sm font-semibold text-slate-800">
+      Injectables
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-pink-200 bg-white/80 p-4 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+    <div className="text-3xl">✨</div>
+    <p className="mt-2 text-sm font-semibold text-slate-800">
+      Facials
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-pink-200 bg-white/80 p-4 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+    <div className="text-3xl">💅</div>
+    <p className="mt-2 text-sm font-semibold text-slate-800">
+      Nails
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-pink-200 bg-white/80 p-4 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+    <div className="text-3xl">💪</div>
+    <p className="mt-2 text-sm font-semibold text-slate-800">
+      Slimming
+    </p>
+  </div>
 
 </div>
 

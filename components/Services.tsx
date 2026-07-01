@@ -157,12 +157,23 @@ export default function Services() {
         <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service, index) => (
             <ServiceCard
-              key={index}
-              icon={service.icon}
-              badge={service.badge}
-              title={service.title}
-              description={service.description}
-            />
+  key={index}
+  icon={service.icon}
+  badge={service.badge}
+  title={service.title}
+  description={service.description}
+  details={{
+    benefits: [
+      "Professional treatment",
+      "Safe and hygienic procedure",
+      "Performed by experienced professionals",
+      "Natural-looking results",
+    ],
+    duration: "30–60 minutes",
+    downtime: "Minimal to none",
+    results: "Results vary depending on the treatment",
+  }}
+/>
           ))}
         </div>
 

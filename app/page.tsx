@@ -3,8 +3,8 @@ import Hero from "@/components/Hero";
 import FloatingContact from "@/components/FloatingContact";
 import Feedback from "@/components/Feedback";
 import About from "@/components/About";
-import Gallery from "@/components/Gallery";
 import Services from "@/components/Services";
+import ResultsGallery from "@/components/ResultsGallery";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
@@ -18,8 +18,8 @@ export default function Home() {
       <FloatingContact />
       <Feedback />
       <About />
-      <Gallery />
       <Services />
+      <ResultsGallery />
       <WhyChooseUs />
       <Testimonials />
       <Contact />

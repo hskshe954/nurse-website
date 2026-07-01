@@ -24,7 +24,7 @@ const features = [
     icon: UserRoundCheck,
     title: "Professional Care",
     description:
-      "Receive treatments from a licensed aesthetic nurse committed to delivering natural-looking results with confidence.",
+      "Received treatments from a licensed aesthetic Doctor & licensed aesthetic Nurse.",
   },
 ];
 
