@@ -56,7 +56,7 @@ export default function About() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
-            At Nurse Mitch Aesthetic Clinic, we believe beauty should enhance
+            At Nurse Mitch Fearless Beauty Lounge, we believe beauty should enhance
             your confidence—not change who you are. Every treatment is
             personalized, safe, and designed to help you achieve natural,
             beautiful results in a comfortable and professional environment.

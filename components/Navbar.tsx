@@ -38,7 +38,7 @@ export default function Navbar() {
             </h2>
 
             <p className="text-xs tracking-widest text-slate-500 uppercase">
-              Aesthetic Clinic
+              Fearless Beauty Lounge
             </p>
           </div>
         </a>

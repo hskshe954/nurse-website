@@ -71,25 +71,24 @@ export default function Hero() {
           </div>
 
           {/* Treatment Tags */}
-          <div className="mt-10 flex flex-wrap gap-3 text-sm">
+          <div className="mt-10 flex flex-wrap justify-center gap-2 md:justify-start">
 
-            <span className="rounded-full bg-pink-100 px-4 py-2 text-pink-600">
-              💉 Botox
-            </span>
+  {[
+    "💉 Botox",
+    "✨ Fillers",
+    "💧 IV Therapy",
+    "🌸 Skin Care",
+    "💅 Nails",
+  ].map((item) => (
+    <span
+      key={item}
+      className="rounded-full bg-pink-100 px-3 py-2 text-xs font-medium text-pink-600 md:px-4 md:text-sm"
+    >
+      {item}
+    </span>
+  ))}
 
-            <span className="rounded-full bg-pink-100 px-4 py-2 text-pink-600">
-              ✨ Fillers
-            </span>
-
-            <span className="rounded-full bg-pink-100 px-4 py-2 text-pink-600">
-              💧 IV Therapy
-            </span>
-
-            <span className="rounded-full bg-pink-100 px-4 py-2 text-pink-600">
-              🌸 Skin Care
-            </span>
-
-          </div>
+</div>
 
           {/* Statistics */}
           <div className="mt-12 grid grid-cols-3 gap-8">

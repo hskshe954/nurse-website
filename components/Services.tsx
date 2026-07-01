@@ -89,6 +89,37 @@ const services = [
     description:
       "Lift sagging skin naturally while stimulating collagen for long-lasting results.",
   },
+
+  // NEW SERVICES
+
+  {
+    icon: Sparkles,
+    badge: "Body Care",
+    title: "Body Contouring & Slimming",
+    description:
+      "Achieve a slimmer, more sculpted physique with non-surgical body contouring and slimming treatments tailored to your body goals.",
+  },
+  {
+    icon: Syringe,
+    badge: "Trending",
+    title: "Hiko Nose Lift",
+    description:
+      "Enhance your nose bridge and shape with a non-surgical Hiko Nose Lift for a natural-looking, refined profile.",
+  },
+  {
+    icon: Sparkles,
+    badge: "Beauty",
+    title: "Waxing",
+    description:
+      "Enjoy silky smooth skin with professional waxing services for the face and body using safe and gentle techniques.",
+  },
+  {
+    icon: Sparkles,
+    badge: "Beauty Lounge",
+    title: "Nail Services",
+    description:
+      "Complete your beauty routine with manicure, pedicure, gel polish, nail extensions, and creative nail art services.",
+  },
 ];
 
 export default function Services() {
@@ -102,7 +133,7 @@ export default function Services() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: .7 }}
+          transition={{ duration: 0.7 }}
           viewport={{ once: true }}
           className="text-center"
         >
