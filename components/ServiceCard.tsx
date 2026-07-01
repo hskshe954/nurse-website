@@ -21,25 +21,38 @@ export default function ServiceCard({
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      whileHover={{ y: -8, scale: 1.02 }}
+      whileHover={{
+        y: -10,
+        scale: 1.03,
+      }}
       transition={{ duration: 0.4 }}
-      className="group rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-lg transition hover:border-cyan-400 hover:shadow-2xl hover:shadow-cyan-500/20"
+      className="group overflow-hidden rounded-3xl border border-pink-100 bg-white p-8 shadow-lg transition-all duration-300 hover:border-pink-300 hover:shadow-[0_20px_50px_rgba(236,72,153,0.20)]"
     >
-      <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-500/20">
-        <Icon className="h-8 w-8 text-cyan-400" />
+      {/* Icon */}
+      <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-pink-100 transition-all duration-300 group-hover:bg-pink-500">
+        <Icon className="h-8 w-8 text-pink-500 transition-all duration-300 group-hover:text-white" />
       </div>
 
-      <span className="inline-block rounded-full bg-cyan-500/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-300">
+      {/* Badge */}
+      <span className="inline-block rounded-full bg-pink-100 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-pink-600">
         {badge}
       </span>
 
-      <h3 className="mt-5 text-2xl font-bold">{title}</h3>
+      {/* Title */}
+      <h3 className="mt-5 text-2xl font-bold text-slate-800">
+        {title}
+      </h3>
 
-      <p className="mt-4 leading-7 text-slate-300">
+      {/* Description */}
+      <p className="mt-4 leading-7 text-slate-600">
         {description}
       </p>
 
-      <button className="mt-8 flex items-center gap-2 rounded-full bg-cyan-500 px-5 py-3 font-semibold text-white transition hover:bg-cyan-400">
+      {/* Divider */}
+      <div className="my-6 h-px bg-gradient-to-r from-transparent via-pink-200 to-transparent" />
+
+      {/* Button */}
+      <button className="flex items-center gap-2 rounded-full bg-pink-500 px-6 py-3 font-semibold text-white transition-all duration-300 hover:gap-3 hover:bg-pink-400">
         Learn More
         <ArrowRight size={18} />
       </button>

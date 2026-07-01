@@ -16,20 +16,20 @@ export default function FloatingContact() {
     {
       icon: <MessageCircle size={22} />,
       label: "Messenger",
-      href: "https://m.me/YOUR_FACEBOOK_USERNAME",
-      color: "bg-cyan-500",
+      href: "https://m.me/100088070547410",
+      color: "bg-blue-500 hover:bg-blue-400",
     },
     {
       icon: <Phone size={22} />,
       label: "Call Us",
-      href: "tel:+639762954314,",
-      color: "bg-green-500",
+      href: "tel:+639762954314",
+      color: "bg-green-500 hover:bg-green-400",
     },
     {
       icon: <MapPin size={22} />,
       label: "Find Us",
-      href: "https://www.google.com/maps/place/8W24%2BPHJ,+34+Tiburcio+Padilla+St,+Cebu+City,+6000+Cebu/@10.301832,123.9057776,19z/data=!3m1!4b1!4m6!3m5!1s0x33a9995de37539fd:0xdd81e8de3a7880a!8m2!3d10.301832!4d123.9064213!16s%2Fg%2F11gjhj5gs6?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D",
-      color: "bg-red-500",
+      href: "https://www.google.com/maps/place/8W24%2BPHJ,+34+Tiburcio+Padilla+St,+Cebu+City,+6000+Cebu/",
+      color: "bg-rose-500 hover:bg-rose-400",
     },
   ];
 
@@ -52,12 +52,14 @@ export default function FloatingContact() {
               }}
               className="group flex items-center gap-3"
             >
-              <div className="rounded-full bg-slate-900/95 px-4 py-2 text-sm font-medium text-white shadow-xl backdrop-blur-lg transition group-hover:bg-slate-800">
+              {/* Label */}
+              <div className="rounded-full border border-pink-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-xl backdrop-blur-lg transition group-hover:bg-pink-50">
                 {item.label}
               </div>
 
+              {/* Icon */}
               <div
-                className={`flex h-14 w-14 items-center justify-center rounded-full text-white shadow-xl transition group-hover:scale-110 ${item.color}`}
+                className={`flex h-14 w-14 items-center justify-center rounded-full text-white shadow-xl transition-all duration-300 group-hover:scale-110 ${item.color}`}
               >
                 {item.icon}
               </div>
@@ -69,18 +71,19 @@ export default function FloatingContact() {
       <motion.button
         whileHover={{
           scale: 1.08,
+          rotate: 8,
         }}
         whileTap={{
           scale: 0.95,
         }}
         onClick={() => setOpen(!open)}
-        className="relative flex h-16 w-16 items-center justify-center rounded-full bg-cyan-500 text-slate-950 shadow-[0_0_40px_rgba(6,182,212,0.45)]"
+        className="relative flex h-16 w-16 items-center justify-center rounded-full bg-pink-500 text-white shadow-[0_0_35px_rgba(236,72,153,0.45)]"
       >
         {/* Pulse */}
         {!open && (
           <>
-            <span className="absolute h-full w-full animate-ping rounded-full bg-cyan-400 opacity-25"></span>
-            <span className="absolute h-full w-full rounded-full bg-cyan-500 opacity-20"></span>
+            <span className="absolute h-full w-full animate-ping rounded-full bg-pink-300 opacity-30"></span>
+            <span className="absolute h-full w-full rounded-full bg-pink-400 opacity-20"></span>
           </>
         )}
 

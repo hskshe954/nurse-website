@@ -25,10 +25,11 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="bg-slate-950 py-24 text-white"
+      className="bg-gradient-to-b from-pink-50 via-white to-pink-50 py-24"
     >
       <div className="mx-auto max-w-7xl px-6">
 
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -36,69 +37,87 @@ export default function Gallery() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="font-semibold uppercase tracking-widest text-cyan-400">
+          <p className="font-semibold uppercase tracking-[0.3em] text-pink-500">
             Before & After
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-            Real Client Transformations
+          <h2 className="mt-4 text-4xl font-bold text-slate-800 md:text-5xl">
+            Real Client
+            <span className="block text-pink-500">
+              Transformations
+            </span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-300">
-            See the natural-looking results achieved through personalized
-            aesthetic treatments performed by Nurse Mitch.
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
+            Every treatment is carefully personalized to enhance your natural
+            beauty while maintaining safe, professional, and elegant results.
           </p>
         </motion.div>
 
-        <div className="mt-16 space-y-14">
+        {/* Gallery */}
+        <div className="mt-20 space-y-14">
           {transformations.map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.15 }}
+              transition={{ delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="rounded-3xl border border-cyan-400/20 bg-white/5 p-6 backdrop-blur-lg"
+              whileHover={{ y: -6 }}
+              className="overflow-hidden rounded-[32px] border border-pink-100 bg-white p-8 shadow-lg transition-all hover:shadow-[0_20px_60px_rgba(236,72,153,0.15)]"
             >
-              <h3 className="mb-8 text-center text-2xl font-bold text-cyan-400">
+              <h3 className="mb-8 text-center text-3xl font-bold text-pink-500">
                 {item.title}
               </h3>
 
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-8 md:grid-cols-2">
 
+                {/* BEFORE */}
                 <div>
-                  <p className="mb-4 text-center font-semibold text-red-400">
-                    BEFORE
-                  </p>
+                  <div className="mb-4 flex items-center justify-center">
+                    <span className="rounded-full bg-red-100 px-5 py-2 text-sm font-bold text-red-500">
+                      BEFORE
+                    </span>
+                  </div>
 
-                  <div className="overflow-hidden rounded-3xl">
+                  <div className="overflow-hidden rounded-3xl shadow-lg">
                     <Image
                       src={item.before}
                       alt="Before"
                       width={700}
                       height={700}
-                      className="h-96 w-full object-cover transition duration-500 hover:scale-105"
+                      className="h-96 w-full object-cover transition duration-500 hover:scale-110"
                     />
                   </div>
                 </div>
 
+                {/* AFTER */}
                 <div>
-                  <p className="mb-4 text-center font-semibold text-green-400">
-                    AFTER
-                  </p>
+                  <div className="mb-4 flex items-center justify-center">
+                    <span className="rounded-full bg-green-100 px-5 py-2 text-sm font-bold text-green-600">
+                      AFTER
+                    </span>
+                  </div>
 
-                  <div className="overflow-hidden rounded-3xl">
+                  <div className="overflow-hidden rounded-3xl shadow-lg">
                     <Image
                       src={item.after}
                       alt="After"
                       width={700}
                       height={700}
-                      className="h-96 w-full object-cover transition duration-500 hover:scale-105"
+                      className="h-96 w-full object-cover transition duration-500 hover:scale-110"
                     />
                   </div>
                 </div>
 
               </div>
+
+              <div className="mt-8 text-center">
+                <span className="rounded-full bg-pink-100 px-6 py-3 text-sm font-semibold text-pink-600">
+                  ✨ Real Results • Personalized Treatment • Professional Care
+                </span>
+              </div>
+
             </motion.div>
           ))}
         </div>

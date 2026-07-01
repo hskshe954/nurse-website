@@ -10,6 +10,7 @@ import {
   Clock,
   Send,
 } from "lucide-react";
+import { FaFacebookF } from "react-icons/fa";
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
@@ -35,8 +36,6 @@ export default function Contact() {
         "1ZNuSMjme1WP3GudZ"
       )
       .then(() => {
-        console.log("SUCCESS");
-
         setLoading(false);
         setSuccess(true);
 
@@ -44,73 +43,73 @@ export default function Contact() {
 
         setTimeout(() => {
           setSuccess(false);
-        }, 5000);
+        }, 4000);
       })
-      .catch((err) => {
-        console.error(err);
-
+      .catch(() => {
         setLoading(false);
         setError(true);
 
         setTimeout(() => {
           setError(false);
-        }, 5000);
+        }, 4000);
       });
   };
 
   return (
     <section
       id="contact"
-      className="bg-slate-900 py-24 text-white"
+      className="bg-gradient-to-br from-pink-50 via-rose-50 to-pink-100 py-24"
     >
       <div className="mx-auto max-w-7xl px-6">
 
-        {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="font-semibold uppercase tracking-widest text-cyan-400">
-            Book an Appointment
-          </p>
 
-          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-            Let's Start Your Aesthetic Journey
+          <span className="rounded-full bg-pink-100 px-5 py-2 text-sm font-semibold text-pink-500">
+            Book Appointment
+          </span>
+
+          <h2 className="mt-6 text-5xl font-bold text-slate-800">
+            Start Your Beauty Journey
           </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-300">
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
             Schedule your consultation with Nurse Mitch and receive
-            personalized treatments tailored to your beauty and wellness goals.
+            personalized aesthetic treatments designed to enhance your natural beauty.
           </p>
+
         </motion.div>
 
         <div className="mt-16 grid gap-10 lg:grid-cols-2">
 
-          {/* Contact Information */}
+          {/* LEFT */}
+
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="space-y-6"
           >
+
             {[
               {
                 icon: Phone,
-                title: "Phone",
+                title: "Phone Number",
                 text: "+63 976 295 4314",
               },
               {
                 icon: Mail,
-                title: "Email",
+                title: "Email Address",
                 text: "mitchampz095@gmail.com",
               },
               {
                 icon: MapPin,
-                title: "Location",
-                text: "34 T.Padilla street corner, M.j Cuenco, Cebu City.",
+                title: "Clinic Location",
+                text: "34 T. Padilla Street Corner M.J Cuenco, Cebu City",
               },
               {
                 icon: Clock,
@@ -118,40 +117,55 @@ export default function Contact() {
                 text: "Monday - Sunday\n9:30 AM - 9:30 PM",
               },
             ].map((item, index) => {
+
               const Icon = item.icon;
 
               return (
+
                 <motion.div
                   key={index}
-                  whileHover={{ x: 8 }}
-                  className="flex items-center gap-5 rounded-3xl border border-cyan-400/20 bg-white/5 p-6 backdrop-blur-lg"
+                  whileHover={{
+                    scale: 1.03,
+                  }}
+                  className="flex items-center gap-5 rounded-[30px] border border-pink-200 bg-white p-6 shadow-lg transition"
                 >
-                  <div className="rounded-2xl bg-cyan-500/20 p-4">
-                    <Icon className="h-7 w-7 text-cyan-400" />
+
+                  <div className="rounded-2xl bg-pink-100 p-4">
+                    <Icon className="h-7 w-7 text-pink-500" />
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold">
+
+                    <h3 className="text-xl font-bold text-slate-800">
                       {item.title}
                     </h3>
 
-                    <p className="whitespace-pre-line text-slate-300">
+                    <p className="whitespace-pre-line text-slate-600">
                       {item.text}
                     </p>
+
                   </div>
+
                 </motion.div>
+
               );
+
             })}
+
+            
+
           </motion.div>
 
-          {/* Appointment Form */}
+          {/* RIGHT */}
+
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="rounded-3xl border border-cyan-400/20 bg-white/5 p-8 backdrop-blur-xl"
+            className="rounded-[35px] border border-pink-200 bg-white p-8 shadow-xl"
           >
-            <h3 className="mb-6 text-2xl font-bold">
+
+            <h3 className="mb-8 text-3xl font-bold text-slate-800">
               Book Appointment
             </h3>
 
@@ -160,12 +174,13 @@ export default function Contact() {
               onSubmit={sendEmail}
               className="space-y-5"
             >
+
               <input
                 name="user_name"
                 type="text"
                 placeholder="Full Name"
                 required
-                className="w-full rounded-xl bg-slate-800 p-4 outline-none focus:ring-2 focus:ring-cyan-400"
+                className="w-full rounded-xl border border-pink-200 p-4 outline-none transition focus:border-pink-500"
               />
 
               <input
@@ -173,7 +188,7 @@ export default function Contact() {
                 type="email"
                 placeholder="Email Address"
                 required
-                className="w-full rounded-xl bg-slate-800 p-4 outline-none focus:ring-2 focus:ring-cyan-400"
+                className="w-full rounded-xl border border-pink-200 p-4 outline-none transition focus:border-pink-500"
               />
 
               <input
@@ -181,92 +196,121 @@ export default function Contact() {
                 type="tel"
                 placeholder="Phone Number"
                 required
-                className="w-full rounded-xl bg-slate-800 p-4 outline-none focus:ring-2 focus:ring-cyan-400"
+                className="w-full rounded-xl border border-pink-200 p-4 outline-none transition focus:border-pink-500"
               />
 
               <select
                 name="treatment"
                 required
-                className="w-full rounded-xl bg-slate-800 p-4 outline-none focus:ring-2 focus:ring-cyan-400"
+                className="w-full rounded-xl border border-pink-200 p-4 outline-none transition focus:border-pink-500"
               >
-                <option value="">Select a Treatment</option>
+                <option value="">Select Treatment</option>
                 <option>Botox</option>
                 <option>Dermal Fillers</option>
-                <option>Skin Rejuvenation</option>
                 <option>HydraFacial</option>
+                <option>Skin Rejuvenation</option>
                 <option>Chemical Peel</option>
                 <option>IV Therapy</option>
                 <option>PDO Thread Lift</option>
               </select>
 
               <input
-  name="appointment_date"
-  type="date"
-  min={new Date().toISOString().split("T")[0]}
-  required
-  className="w-full rounded-xl bg-slate-800 p-4 outline-none focus:ring-2 focus:ring-cyan-400"
-/>
-<select
-  name="appointment_time"
-  required
-  className="w-full rounded-xl bg-slate-800 p-4 outline-none focus:ring-2 focus:ring-cyan-400"
->
-  <option value="">Preferred Time</option>
-  <option>9:00 AM</option>
-  <option>10:00 AM</option>
-  <option>11:00 AM</option>
-  <option>1:00 PM</option>
-  <option>2:00 PM</option>
-  <option>3:00 PM</option>
-  <option>4:00 PM</option>
-  <option>5:00 PM</option>
-</select>
-              <textarea
+                name="appointment_date"
+                type="date"
+                min={new Date().toISOString().split("T")[0]}
+                required
+                className="w-full rounded-xl border border-pink-200 p-4 outline-none transition focus:border-pink-500"
+              />
+
+              <select
+                name="appointment_time"
+                required
+                className="w-full rounded-xl border border-pink-200 p-4 outline-none transition focus:border-pink-500"
+              >
+                <option value="">Preferred Time</option>
+                <option>9:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>1:00 PM</option>
+                <option>2:00 PM</option>
+                <option>3:00 PM</option>
+                <option>4:00 PM</option>
+                <option>5:00 PM</option>
+              </select>
+            <textarea
                 name="message"
                 rows={5}
                 placeholder="Tell us about your concerns or preferred treatment..."
                 required
-                className="w-full rounded-xl bg-slate-800 p-4 outline-none focus:ring-2 focus:ring-cyan-400"
+                className="w-full rounded-xl border border-pink-200 p-4 outline-none transition focus:border-pink-500"
               />
 
               <button
                 type="submit"
                 disabled={loading}
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-cyan-500 py-4 font-semibold text-slate-950 transition hover:scale-[1.02] hover:bg-cyan-400 disabled:cursor-not-allowed disabled:opacity-60"
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-pink-500 py-4 font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:bg-pink-400 disabled:cursor-not-allowed disabled:opacity-60"
               >
                 <Send size={20} />
-                {loading ? "Sending Appointment..." : "Book Appointment"}
+
+                {loading
+                  ? "Sending Appointment..."
+                  : "Book Appointment"}
               </button>
 
               {success && (
-                <div className="rounded-xl border border-green-500/30 bg-green-500/10 p-4 text-center text-green-400">
-                  ✅ Appointment request sent successfully!
+                <div className="rounded-xl border border-green-200 bg-green-50 p-4 text-center font-medium text-green-600">
+                  🌸 Your appointment request has been sent successfully!
                 </div>
               )}
 
               {error && (
-                <div className="rounded-xl border border-red-500/30 bg-red-500/10 p-4 text-center text-red-400">
-                  ❌ Failed to send appointment request. Please try again.
+                <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-center font-medium text-red-600">
+                  ❌ Something went wrong. Please try again.
                 </div>
               )}
-            </form>
-            {/* Facebook Button */}
-<div className="mt-8 text-center">
-  <p className="text-slate-300 mb-3">
-    Follow us on Facebook
-  </p>
 
+            </form>
+
+            {/* Divider */}
+
+            <div className="my-8 flex items-center gap-4">
+              <div className="h-px flex-1 bg-pink-200"></div>
+
+              <span className="text-sm font-medium text-slate-400">
+                OR
+              </span>
+
+              <div className="h-px flex-1 bg-pink-200"></div>
+            </div>
+
+            {/* Facebook */}
+
+            <div className="mt-2 flex justify-center">
   <a
     href="https://www.facebook.com/profile.php?id=100088070547410"
     target="_blank"
-    className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-500 transition"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 rounded-full bg-pink-500 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-pink-400"
   >
-    📘 Visit Facebook Page
+    <FaFacebookF />
+    Visit our Facebook Page
   </a>
 </div>
+
+            {/* Small Note */}
+
+            <p className="mt-6 text-center text-sm leading-6 text-slate-500">
+              We usually respond within
+              <span className="font-semibold text-pink-500">
+                {" "}a few minutes{" "}
+              </span>
+              during clinic hours.
+            </p>
+
           </motion.div>
 
         </div>
+
       </div>
     </section>
   );

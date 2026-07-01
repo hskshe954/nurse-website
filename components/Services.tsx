@@ -2,6 +2,7 @@
 
 import { Syringe, Sparkles, Droplets } from "lucide-react";
 import ServiceCard from "./ServiceCard";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -94,26 +95,35 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="bg-slate-950 py-24 text-white"
+      className="bg-gradient-to-b from-white via-pink-50 to-white py-24"
     >
       <div className="mx-auto max-w-7xl px-6">
 
-        <div className="text-center">
-          <p className="font-semibold uppercase tracking-widest text-cyan-400">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: .7 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <p className="font-semibold uppercase tracking-[0.3em] text-pink-500">
             Our Premium Treatments
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-            Professional Aesthetic Services
+          <h2 className="mt-4 text-4xl font-bold text-slate-800 md:text-5xl">
+            Professional
+            <span className="block text-pink-500">
+              Aesthetic Services
+            </span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-300">
-            Discover our comprehensive range of aesthetic and wellness
-            treatments performed with precision, safety, and personalized care.
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
+            Experience personalized aesthetic treatments designed to enhance
+            your natural beauty with safety, precision, and exceptional care.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service, index) => (
             <ServiceCard
               key={index}
