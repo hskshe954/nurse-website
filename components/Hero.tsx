@@ -31,17 +31,15 @@ export default function Hero() {
 
           {/* Heading */}
           <h1 className="mt-8 text-5xl font-extrabold leading-tight text-slate-800 md:text-7xl">
-            Reveal Your
-            <br />
+  Fearless
+  <span className="block text-pink-500">
+    Beauty Lounge
+  </span>
+</h1>
 
-            <span className="text-pink-500">
-              Natural Beauty
-            </span>
-
-            <br />
-
-            With Confidence
-          </h1>
+<h2 className="mt-4 text-2xl font-semibold text-slate-700 md:text-3xl">
+  Premium Aesthetic & Wellness Clinic in Cebu City
+</h2>
 
           {/* Description */}
           <p className="mt-8 max-w-xl text-lg leading-8 text-slate-600">
