@@ -26,7 +26,7 @@ export default function Hero() {
         >
           {/* Badge */}
           <span className="inline-flex items-center rounded-full border border-pink-200 bg-white px-5 py-2 text-sm font-semibold text-pink-600 shadow-sm">
-            ✨ Premium Aesthetic & Wellness Clinic
+            ✨ Fearless Beauty Lounge • Premium Aesthetic Clinic
           </span>
 
           {/* Heading */}
