@@ -349,6 +349,28 @@ export default function Contact() {
 
         </div>
 
+        {/* Google Map */}
+        <div className="mt-12 overflow-hidden rounded-[35px] border border-pink-200 bg-white shadow-xl">
+          <iframe
+            src="https://www.google.com/maps?q=34+T.+Padilla+Street+Corner+M.J+Cuenco,+Cebu+City&output=embed"
+            width="100%"
+            height="260"
+            loading="lazy"
+            className="w-full"
+          />
+          <div className="flex justify-center border-t border-pink-200 bg-white p-4">
+  <a
+    href="https://www.google.com/maps/search/?api=1&query=34+T.+Padilla+Street+Corner+M.J+Cuenco,+Cebu+City"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 rounded-full bg-pink-500 px-6 py-3 font-semibold text-white transition hover:bg-pink-400"
+  >
+    <MapPin className="h-5 w-5" />
+    Get Directions
+  </a>
+</div>
+        </div>
+
       </div>
     </section>
   );
