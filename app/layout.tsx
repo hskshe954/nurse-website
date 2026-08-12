@@ -14,11 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nursemitchfearlessbeautylounge.com"),
+  metadataBase: new URL(
+    "https://www.nursemitchfearlessbeautylounge.com"
+  ),
 
   alternates: {
-  canonical: "https://www.nursemitchfearlessbeautylounge.com/",
-},
+    canonical: "https://www.nursemitchfearlessbeautylounge.com/",
+  },
 
   title: {
     default: "Nurse Mitch Fearless Beauty Lounge",
@@ -57,7 +59,7 @@ export const metadata: Metadata = {
     title: "Nurse Mitch Fearless Beauty Lounge",
     description:
       "Premium Medical Spa and Aesthetic Clinic in Cebu City.",
-    url: "https://www.nursemitchfearlessbeautylounge.com",
+    url: "https://www.nursemitchfearlessbeautylounge.com/",
     siteName: "Nurse Mitch Fearless Beauty Lounge",
     locale: "en_PH",
     type: "website",
@@ -107,9 +109,10 @@ export default function RootLayout({
 
               name: "Nurse Mitch Fearless Beauty Lounge",
 
-              url: "https://www.nursemitchfearlessbeautylounge.com",
+              url: "https://www.nursemitchfearlessbeautylounge.com/",
 
-              image: "https://www.nursemitchfearlessbeautylounge.com/logo.png",
+              image:
+                "https://www.nursemitchfearlessbeautylounge.com/logo.png",
 
               telephone: "+63 976 295 4314",
 
