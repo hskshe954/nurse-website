@@ -16,6 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.nursemitchfearlessbeautylounge.com"),
 
+  alternates: {
+  canonical: "https://www.nursemitchfearlessbeautylounge.com/",
+},
+
   title: {
     default: "Nurse Mitch Fearless Beauty Lounge",
     template: "%s | Nurse Mitch Fearless Beauty Lounge",
